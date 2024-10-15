@@ -1,10 +1,15 @@
-hola mundo
 Get-ExecutionPolicy
+
 Set-ExecutionPolicy RemoteSigned
+
 py -m venv mientornovirtual 
+
 .\mientornovirtual\Scripts\Activate
+
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
 python get-pip.py
+
 pip install PyPDF2 pdfplumber openpyxl pandas
 
 
