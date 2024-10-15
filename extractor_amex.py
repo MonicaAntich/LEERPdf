@@ -1,6 +1,6 @@
 import pdfplumber  # type: ignore
 
-def extraer_informacion_pdf(archivo_pdf, tipo_documento):
+def extraer_amex_pdf(archivo_pdf, tipo_documento):
     informacion = []
     tipo_y_numero_recuperado = False  # Para capturar "Tipo y Nº" solo una vez (para el PDF de naranja)
     fecha_emision_recuperada = False  # Para capturar la "Fecha de Emisión" solo una vez (para el PDF de naranja)
