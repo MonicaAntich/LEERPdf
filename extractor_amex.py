@@ -37,11 +37,11 @@ import pdfplumber
 import re  # Usaremos expresiones regulares para extraer los datos
 
 def extraer_amex_pdf(archivo_pdf, tipo_documento):
-    print("Entré a la búsqueda del amex")
+    # print("Entré a la búsqueda del amex")
     # Diccionario para almacenar los últimos valores encontrados
     pago_info = {
-        "Resumen mensual de operaciones": None,
-        "Fecha de Emisión": None
+        "Resumen mensual numero ": None,
+        "Fecha de Emisión ": None
     }
     
     # Definir las expresiones regulares para buscar los valores
