@@ -18,11 +18,11 @@ def main():
 
     # Definir las rutas según la elección
     if opcion == '1':
-        ruta_pdf = r"C:\Users\Monica\Desktop\Leer PDF\naranja.pdf"
+        ruta_pdf = r"C:\leer_pdf\naranja.pdf"
         archivo_excel = "informacion_pago_naranja.xlsx"
         tipo_documento = "naranja"  # Tipo de documento para Naranja
     elif opcion == '2':
-        ruta_pdf = r"C:\Users\Monica\Desktop\Leer PDF\amex.pdf"
+        ruta_pdf = r"C:\leer_pdf\amex.pdf"
         archivo_excel = "informacion_pago_amex.xlsx"
         tipo_documento = "amex"  # Tipo de documento para Amex
     else:

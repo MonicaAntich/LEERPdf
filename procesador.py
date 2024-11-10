@@ -23,6 +23,27 @@ def procesar_informacion_naranja(lineas):
 
     return data
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Función que procesa las líneas para extraer los datos de Amex
 def procesar_informacion_amex(lineas):
     data = []
@@ -64,6 +85,18 @@ def procesar_informacion_amex(lineas):
         data.append(fila)
 
     return data
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Función que extrae las líneas de texto de un PDF
 def extraer_informacion_pdf(archivo_pdf, tipo_documento):
