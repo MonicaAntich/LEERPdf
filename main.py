@@ -1,5 +1,5 @@
-import pandas as pd  # type: ignore
-from extractor import extraer_informacion_pdf
+import pandas as pd  
+from extractor_naranja import extraer_naranja_pdf
 from extractor_amex import extraer_amex_pdf
 
 def guardar_en_excel(data, archivo_excel):
@@ -7,6 +7,40 @@ def guardar_en_excel(data, archivo_excel):
     df.to_excel(archivo_excel, index=False)
 
 # Función principal para ejecutar el programa
+# def main():
+#     # Solicitar al usuario que elija qué PDF procesar
+#     print("Selecciona el PDF que deseas procesar:")
+#     print("1. Naranja")
+#     print("2. Amex")
+    
+#     # Obtener la opción del usuario
+#     opcion = input("Ingresa el número de tu elección (1 o 2): ")
+
+#     # Definir las rutas según la elección
+#     if opcion == '1':
+#         ruta_pdf = r"C:\leer_pdf\naranja.pdf"
+#         archivo_excel = "informacion_pago_naranja.xlsx"
+#         tipo_documento = "naranja"  # Tipo de documento para Naranja
+        
+#     elif opcion == '2':
+#         ruta_pdf = r"C:\leer_pdf\amex.pdf"
+#         archivo_excel = "informacion_pago_amex.xlsx"
+#         tipo_documento = "amex"  # Tipo de documento para Amex
+        
+#     else:
+#         print("Opción no válida. Por favor, elige 1 o 2.")
+#         return  # Terminar el programa si la opción no es válida
+
+
+
+
+    # # Extraer la información del PDF
+    # informacion_pdf = extraer_naranja_pdf(ruta_pdf, tipo_documento)
+    # informacion_pdf = extraer_amex_pdf(ruta_pdf, tipo_documento)
+    # # informacion_pdf = extraer_visa_pdf(ruta_pdf, tipo_documento)
+# Función principal para ejecutar el programa
+
+
 def main():
     # Solicitar al usuario que elija qué PDF procesar
     print("Selecciona el PDF que deseas procesar:")
@@ -16,21 +50,39 @@ def main():
     # Obtener la opción del usuario
     opcion = input("Ingresa el número de tu elección (1 o 2): ")
 
-    # Definir las rutas según la elección
+    # Definir las rutas y las funciones según la elección
     if opcion == '1':
         ruta_pdf = r"C:\leer_pdf\naranja.pdf"
         archivo_excel = "informacion_pago_naranja.xlsx"
         tipo_documento = "naranja"  # Tipo de documento para Naranja
+
+        # Llamar al método de Naranja
+        informacion_pdf = extraer_naranja_pdf(ruta_pdf, tipo_documento)
+    
     elif opcion == '2':
         ruta_pdf = r"C:\leer_pdf\amex.pdf"
         archivo_excel = "informacion_pago_amex.xlsx"
         tipo_documento = "amex"  # Tipo de documento para Amex
+
+        # Llamar al método de Amex
+        informacion_pdf = extraer_amex_pdf(ruta_pdf, tipo_documento)
+    
     else:
         print("Opción no válida. Por favor, elige 1 o 2.")
         return  # Terminar el programa si la opción no es válida
 
-    # Extraer la información del PDF
-    informacion_pdf = extraer_informacion_pdf(ruta_pdf, tipo_documento)
+
+
+
+
+
+
+
+
+
+
+
+
 
     # Publicar la información adquirida por consola
     print(f"\nInformación {tipo_documento.capitalize()}:")
