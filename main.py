@@ -18,11 +18,11 @@ def main():
 
     # Definir las rutas según la elección
     if opcion == '1':
-        ruta_pdf = r"C:\Users\Monica\Desktop\Leer PDF\naranja.pdf"
+        ruta_pdf = r"C:\Users\Monica\Desktop\LEERPdf\naranja1607.pdf"
         archivo_excel = "informacion_pago_naranja.xlsx"
         tipo_documento = "naranja"  # Tipo de documento para Naranja
     elif opcion == '2':
-        ruta_pdf = r"C:\Users\Monica\Desktop\Leer PDF\amex.pdf"
+        ruta_pdf = r"C:\Users\Monica\Desktop\LEERPdf\amex.pdf"
         archivo_excel = "informacion_pago_amex.xlsx"
         tipo_documento = "amex"  # Tipo de documento para Amex
     else:
@@ -39,8 +39,8 @@ def main():
             print(f"{clave}: {valor}")  # Imprime cada par clave-valor
 
     # Guardar la información extraída en un archivo Excel
-    #guardar_en_excel(informacion_pdf, archivo_excel)
-    #print(f"Información guardada en {archivo_excel}")
+    guardar_en_excel(informacion_pdf, archivo_excel)
+    print(f"Información guardada en {archivo_excel}")
 
 if __name__ == "__main__":
     main()

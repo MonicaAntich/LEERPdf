@@ -85,7 +85,7 @@ def extraer_informacion_pdf(archivo_pdf, tipo_documento):
 
 # Ejemplo de uso
 tipo_documento = input("Selecciona el PDF que deseas procesar:\n1. Naranja\n2. Amex\nIngresa el número de tu elección (1 o 2): ")
-ruta_pdf = r"C:\Users\Monica\Desktop\Leer PDF\naranja.pdf" if tipo_documento == "1" else r"C:\Users\Monica\Desktop\Leer PDF\amex.pdf"
+ruta_pdf = r"C:\Users\Monica\Desktop\LEERPdf\naranja.pdf" if tipo_documento == "1" else r"C:\Users\Monica\Desktop\Leer PDF\amex.pdf"
 
 informacion_procesada = extraer_informacion_pdf(ruta_pdf, "naranja" if tipo_documento == "1" else "amex")
 
